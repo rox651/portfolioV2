@@ -41,12 +41,7 @@ export const Portfolio = () => {
   };
 
   return (
-    <motion.section
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{duration:1}}
-      className="max-w-7xl py-10 mx-auto px-5 sm:px-10 min-h-[700px]"
-    >
+    <section className="max-w-7xl py-10 mx-auto px-5 sm:px-10 min-h-[700px] overflow-hidden">
       <aside className="flex gap-3 flex-col lg:flex-row justify-between text-palette-50">
         <h1 className="text-4xl lg:text-6xl font-bold  uppercase">Portfolio</h1>
         <span className="flex items-center gap-3  text-xl  relative">
@@ -64,11 +59,16 @@ export const Portfolio = () => {
           </motion.ul>
         </span>
       </aside>
-      <div className="grid lg:grid-cols-4 gap-10 pt-10 h-[90%] ">
+      <motion.div
+        initial={{ opacity: 0, y: "200px" }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="grid lg:grid-cols-4 gap-10 pt-10 h-[90%] "
+      >
         {projects.map((project, index) => (
           <PortfolioItem key={index} project={project} index={index} />
         ))}
-      </div>
-    </motion.section>
+      </motion.div>
+    </section>
   );
 };
