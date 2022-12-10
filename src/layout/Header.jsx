@@ -17,7 +17,6 @@ export const Header = () => {
       },
     },
   };
-
   return (
     <motion.header
       variants={header}

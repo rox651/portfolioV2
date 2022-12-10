@@ -41,7 +41,7 @@ export const Portfolio = () => {
   };
 
   return (
-    <section className="max-w-7xl py-10 mx-auto px-5 sm:px-10 min-h-[700px] overflow-hidden">
+    <section data-scroll-section className="max-w-7xl py-10 mx-auto px-5 sm:px-10 min-h-[700px] overflow-hidden">
       <aside className="flex gap-3 flex-col lg:flex-row justify-between text-palette-50">
         <h1 className="text-4xl lg:text-6xl font-bold  uppercase">Portfolio</h1>
         <span className="flex items-center gap-3  text-xl  relative">
@@ -60,6 +60,8 @@ export const Portfolio = () => {
         </span>
       </aside>
       <motion.div
+        data-scroll
+        data-scroll-speed="-1"
         initial={{ opacity: 0, y: "200px" }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
