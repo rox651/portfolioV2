@@ -2,10 +2,10 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
+import "locomotive-scroll/dist/locomotive-scroll.min.css";
 
-import { Hero } from "./components/Hero";
-import { Portfolio } from "./components/Portfolio";
-import { Header } from "./layout/";
+import { Hero, Portfolio, Header, Modal } from "./components/";
+import { LanguageModal } from "./languages";
 
 function App() {
   const containerRef = useRef(null);
@@ -24,6 +24,8 @@ function App() {
         <Header />
         <Hero />
         <Portfolio />
+        <Modal />
+        <LanguageModal/>
       </motion.main>
     </LocomotiveScrollProvider>
   );

@@ -55,11 +55,7 @@ export const Hero = () => {
       animate="animate"
       className="max-w-7xl mx-auto px-5 sm:px-10 h-screen xl:h-[700px] grid place-items-center place-content-center "
     >
-      <h1
-        data-scroll
-        data-scroll-speed="1"
-        className="uppercase font-bold text-4xl lg:text-8xl transition-all text-center text-palette-50  overflow-hidden  "
-      >
+      <h1 className="uppercase font-bold text-4xl lg:text-8xl transition-all text-center text-palette-50  overflow-hidden  ">
         {letterAnimation(name)}
         <br />
         {letterAnimation(lastname)}
